@@ -7,15 +7,6 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 
-export const preprocessMarkdown = (content: string) => {
-  return content
-    .replace(/:::info/g, '<div class="info">')
-    .replace(/:::success/g, '<div class="success">')
-    .replace(/:::warning/g, '<div class="warning">')
-    .replace(/:::tip/g, '<div class="tip">')
-    .replace(/:::/g, "</div>")
-};
-
 export const transformHighlight = (text: string) => {
   const regex = /==(.*?)==/g;
   const parts = [];
